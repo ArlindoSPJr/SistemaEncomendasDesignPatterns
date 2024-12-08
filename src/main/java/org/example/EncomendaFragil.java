@@ -4,6 +4,7 @@ public class EncomendaFragil implements IEncomenda{
 
     private String tipo;
     private double valor;
+    private double valorTotal;
 
     public EncomendaFragil(String tipo, double valor) {
         this.tipo = tipo;
@@ -12,6 +13,11 @@ public class EncomendaFragil implements IEncomenda{
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public double getValorTotal() {
+        valorTotal = this.valor;
+        return valorTotal;
     }
 
     public void setValor(double valor) {

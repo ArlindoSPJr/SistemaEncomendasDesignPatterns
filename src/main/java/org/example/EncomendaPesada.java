@@ -5,6 +5,7 @@ public class EncomendaPesada implements IEncomenda{
 
     private String tipo;
     private double valor;
+    private double valorTotal;
 
     public EncomendaPesada(String tipo, double valor) {
         this.tipo = tipo;
@@ -19,6 +20,10 @@ public class EncomendaPesada implements IEncomenda{
         this.valor = valor;
     }
 
+    public double getValorTotal() {
+        valorTotal = this.valor;
+        return valorTotal;
+    }
 
     @Override
     public String getTipo() {

@@ -16,12 +16,17 @@ public class GestorDeEncomendas {
         return GESTOR;
     }
 
-    public static void cadastrarEncomenda(IEncomenda encomda){
-        encomendas.add(encomda);
+    public static void cadastrarEncomenda(IEncomenda encomenda){
+        encomendas.add(encomenda);
     }
 
     public void cadastrarEntrega(IEntrega entrega){
         entregas.add(entrega);
+    }
+
+    public void mudarTipoEncomenda(IEntrega entrega){
+        entrega.trocarTipoEntrega(entrega);
+        System.out.println(entrega.getDesc());
     }
 
     public void enviarEncomenda(IEncomenda encomenda){

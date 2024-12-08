@@ -9,4 +9,9 @@ public class EntregaComum implements IEntrega{
                 "Tempo de entrega: 10 dias ";
     }
 
+    @Override
+    public String trocarTipoEntrega(IEntrega entrega) {
+        return "Trocando para entrega Comum";
+    }
+
 }
