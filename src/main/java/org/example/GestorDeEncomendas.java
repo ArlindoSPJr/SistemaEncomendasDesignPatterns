@@ -6,6 +6,7 @@ import java.util.List;
 public class GestorDeEncomendas {
     private static final GestorDeEncomendas GESTOR = new GestorDeEncomendas();
     private static List<IEncomenda> encomendas = new ArrayList<>();
+    private List<IEntrega> entregas = new ArrayList<>();
 
     private GestorDeEncomendas() {
 
@@ -15,8 +16,12 @@ public class GestorDeEncomendas {
         return GESTOR;
     }
 
-    public static void CadastrarEncomenda(IEncomenda encomda){
+    public static void cadastrarEncomenda(IEncomenda encomda){
         encomendas.add(encomda);
+    }
+
+    public void cadastrarEntrega(IEntrega entrega){
+        entregas.add(entrega);
     }
 
     public void enviarEncomenda(IEncomenda encomenda){
